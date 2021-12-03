@@ -34,14 +34,14 @@ function login(){
       rol=snapshot.val().rol;
       window.location.href="./panel.php?user="+usuer+"&rol="+rol+"";
       return true;
-    } else if(snapshot.val().email != email || snapshot.val().password !=pass){
-      alert('Usuario o Contraseña incorrecto');
-      return true;
+    } else{
+      return false;
       
     }
     setDate();
     updateScrollbar();
   });
+  
 }
 function cargar(email){
     if(email==''){
